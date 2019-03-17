@@ -98,20 +98,24 @@
 
 
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="题目:)Description:Look at what I found! XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH Solution:这段文字看起来像base64，let’s try to decode! 1echo XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVV">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Romdoor’s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/03/index.html">
+<meta property="og:url" content="http://yoursite.com/repeat-xor/Xor-crypto.html">
 <meta property="og:site_name" content="Romdoor’s blog">
+<meta property="og:description" content="题目:)Description:Look at what I found! XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH Solution:这段文字看起来像base64，let’s try to decode! 1echo XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVV">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-17T17:29:10.788Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Romdoor’s blog">
+<meta name="twitter:description" content="题目:)Description:Look at what I found! XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH Solution:这段文字看起来像base64，let’s try to decode! 1echo XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVV">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2019/03/">
+  <link rel="canonical" href="http://yoursite.com/repeat-xor/Xor-crypto.html">
 
 
 
@@ -121,7 +125,7 @@
   };
 </script>
 
-  <title>归档 | Romdoor’s blog</title>
+  <title> | Romdoor’s blog</title>
   
 
 
@@ -169,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -275,7 +279,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -363,78 +367,73 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+
+</h1>
+
+<div class="post-meta">
   
   
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+
+
+
+</div>
+
+</header>
 
       
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 1 篇日志。 继续努力。
-      </span>
       
-
       
-
+      <div class="post-body">
         
         
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目:)"></a>题目:)</h2><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><p>Look at what I found! XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>这段文字看起来像base64，let’s try to decode!</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH | base64 -d</span><br></pre></td></tr></table></figure>
+<p>得到：]@]LWRsW        TFN     I\JLHZN@N@U\I♣KO]`HW    [       V@N]VLZN@N@U\IG</p>
+<p>前三个字母给我们一个理由保持乐观:我们知道所有flag是<code>gigem</code>,第一和第三个字节相同的匹配这个模式。</p>
+<p>起初我认为这可能是某种旋转密码,但之间的差异<code>g</code>和0 x5d比之间的差异是不同的<code>i</code>和0 x40。</p>
+<p>下一个尝试XOR密码。 XOR属性之一是,如果我们假设<code>a^b = c</code>,那么这也是事实<code>a^c = b</code>。 如果有一些秘密密钥<code>k</code>用来XOR原始明文,我们知道吗<code>&#39;g&#39; ^ key = 0x5d</code>,那么我们可以通过执行恢复密钥0x5d ^ ‘g’`得到0 x3a。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">""</span>.join(chr(ord(x) ^ <span class="number">0x3a</span>) <span class="keyword">for</span> x <span class="keyword">in</span> base64.b64decode(<span class="string">"XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH"</span>))</span><br><span class="line"><span class="string">'gzgvmhI4m3n|t3sfpvr`tztzofs? qug Z rm3a3lztglv `tztzofs=&#125;'</span></span><br></pre></td></tr></table></figure>
+<p>结果不太对即使开头得到g结尾得到}</p>
+<p>我猜想有两个key轮流加密,而</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>chr(:<span class="number">0x3a</span>)</span><br><span class="line"><span class="string">':'</span></span><br></pre></td></tr></table></figure>
+<p>恰巧题目又给我们提醒<strong>:)</strong></p>
+<p>编写exp:</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">import</span> base64</span><br><span class="line">&gt; </span><br><span class="line">&gt; s = <span class="string">"XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH"</span></span><br><span class="line">&gt; decoded = base64.b64decode(s)</span><br><span class="line">&gt; </span><br><span class="line">&gt; xor1 = ord(decoded[<span class="number">0</span>]) ^ ord(<span class="string">'g'</span>)</span><br><span class="line">&gt; xor2 = ord(decoded[<span class="number">1</span>]) ^ ord(<span class="string">'i'</span>)</span><br><span class="line">&gt; </span><br><span class="line">&gt; xors = [xor1, xor2]</span><br><span class="line">&gt; </span><br><span class="line">&gt; res = <span class="string">""</span></span><br><span class="line">&gt; <span class="keyword">for</span> i <span class="keyword">in</span> range(len(decoded)):</span><br><span class="line">&gt;     res += chr(ord(decoded[i]) ^ xors[i % <span class="number">2</span>])</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="keyword">print</span> (res)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>Output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/media/sf_CTFs/tamu/Smiley# python solve.py</span><br><span class="line">gigem&#123;I&apos;m not superstitious, but I am a little stitious.&#125;</span><br></pre></td></tr></table></figure>
         
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/18/repeat-xor-TAMUctf-0/" itemprop="url">
-            
-              <span itemprop="name">未命名</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-18T00:29:33+08:00" content="2019-03-18">
-          03-18
-        </time>
       </div>
-
-    </header>
-  </article>
-
-
-
       
-
+      
+      
     </div>
+    
+
+
+
+    
+    
+    
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -454,8 +453,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -467,15 +475,6 @@
 
           
             <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
               
 
               
@@ -518,6 +517,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目:)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description"><span class="nav-number">1.0.1.</span> <span class="nav-text">Description:</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution:</span></a></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -646,6 +662,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -661,6 +681,8 @@
 
   
 
+
+  
 
 
   
