@@ -98,24 +98,24 @@
 
 
 
-  <meta name="description" content="题目:)Description:Look at what I found! XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH Solution:这段文字看起来像base64，let’s try to decode! 1echo XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVV">
+  <meta name="description" content="简单ECC概念 参考链接：http://www.8btc.com/eccmath 大体上的意思是说，给你一个曲线F：y^2=x^3+ax+b 你确定下来a和b，然后找一个在曲线F上的点G（x1,y1） 然后自己随机生成一个k（私钥） 然后生成公钥S=kG 注意，这里的kG可不是k*G这么简单，这是几何意义上的： S=G+G+G+G+……+G（K个G） 然后把公钥丢出去，私钥留给自己 和RSA差不">
 <meta property="og:type" content="article">
-<meta property="og:title" content="repeat xor">
-<meta property="og:url" content="http://yoursite.com/2019/03/18/repeat-xor/index.html">
+<meta property="og:title" content="简单ECC">
+<meta property="og:url" content="http://yoursite.com/2019/04/16/简单ECC概念/index.html">
 <meta property="og:site_name" content="Romdoor’s blog">
-<meta property="og:description" content="题目:)Description:Look at what I found! XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH Solution:这段文字看起来像base64，let’s try to decode! 1echo XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVV">
+<meta property="og:description" content="简单ECC概念 参考链接：http://www.8btc.com/eccmath 大体上的意思是说，给你一个曲线F：y^2=x^3+ax+b 你确定下来a和b，然后找一个在曲线F上的点G（x1,y1） 然后自己随机生成一个k（私钥） 然后生成公钥S=kG 注意，这里的kG可不是k*G这么简单，这是几何意义上的： S=G+G+G+G+……+G（K个G） 然后把公钥丢出去，私钥留给自己 和RSA差不">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-17T17:40:23.427Z">
+<meta property="og:updated_time" content="2019-04-16T14:32:45.474Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="repeat xor">
-<meta name="twitter:description" content="题目:)Description:Look at what I found! XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH Solution:这段文字看起来像base64，let’s try to decode! 1echo XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVV">
+<meta name="twitter:title" content="简单ECC">
+<meta name="twitter:description" content="简单ECC概念 参考链接：http://www.8btc.com/eccmath 大体上的意思是说，给你一个曲线F：y^2=x^3+ax+b 你确定下来a和b，然后找一个在曲线F上的点G（x1,y1） 然后自己随机生成一个k（私钥） 然后生成公钥S=kG 注意，这里的kG可不是k*G这么简单，这是几何意义上的： S=G+G+G+G+……+G（K个G） 然后把公钥丢出去，私钥留给自己 和RSA差不">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/18/repeat-xor/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/16/简单ECC概念/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>repeat xor | Romdoor’s blog</title>
+  <title>简单ECC | Romdoor’s blog</title>
   
 
 
@@ -363,7 +363,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/18/repeat-xor/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/16/简单ECC概念/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.left">
@@ -380,7 +380,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">repeat xor
+          <h1 class="post-title" itemprop="name headline">简单ECC
 
               
             
@@ -406,13 +406,9 @@
                 
               
 
-              <time title="创建时间：2019-03-18 01:37:49 / 修改时间：01:40:23" itemprop="dateCreated datePublished" datetime="2019-03-18T01:37:49+08:00">2019-03-18</time>
+              <time title="创建时间：2019-04-16 22:32:45" itemprop="dateCreated datePublished" datetime="2019-04-16T22:32:45+08:00">2019-04-16</time>
             
 
-            
-              
-
-              
             
           </span>
 
@@ -445,24 +441,32 @@
       
 
       
-        <h2 id="题目"><a href="#题目" class="headerlink" title="题目:)"></a>题目:)</h2><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Look at what I found! XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH</p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>这段文字看起来像base64，let’s try to decode!</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH | base64 -d</span><br></pre></td></tr></table></figure>
-<p>得到：]@]LWRsW TFN I\JLHZN@N@U\I♣KO]`HW [ V@N]VLZN@N@U\IG</p>
-<p>前三个字母给我们一个理由保持乐观:我们知道所有flag是<code>gigem</code>,第一和第三个字节相同的匹配这个模式。</p>
-<p>起初我认为这可能是某种旋转密码,但之间的差异<code>g</code>和0 x5d比之间的差异是不同的<code>i</code>和0 x40。</p>
-<p>下一个尝试XOR密码。 XOR属性之一是,如果我们假设<code>a^b = c</code>,那么这也是事实<code>a^c = b</code>。 如果有一些秘密密钥<code>k</code>用来XOR原始明文,我们知道吗<code>&#39;g&#39; ^ key = 0x5d</code>,那么我们可以通过执行恢复密钥0x5d ^ ‘g’`得到0 x3a。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; &quot;&quot;.join(chr(ord(x) ^ 0x3a) for x in base64.b64decode(&quot;XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH&quot;))</span><br><span class="line">&apos;gzgvmhI4m3n|t3sfpvr`tztzofs? qug Z rm3a3lztglv `tztzofs=&#125;&apos;</span><br></pre></td></tr></table></figure>
-<p>结果不太对即使开头得到g结尾得到}</p>
-<p>我猜想有两个key轮流加密,而</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>chr(:<span class="number">0x3a</span>)</span><br><span class="line"><span class="string">':'</span></span><br></pre></td></tr></table></figure>
-<p>恰巧题目又给我们提醒<strong>:)</strong></p>
-<p>编写exp:</p>
-<blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&gt; &gt;<span class="keyword">import</span> base64</span><br><span class="line">&gt; &gt;</span><br><span class="line">&gt; &gt;s = <span class="string">"XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH"</span></span><br><span class="line">&gt; &gt;decoded = base64.b64decode(s)</span><br><span class="line">&gt; &gt;</span><br><span class="line">&gt; &gt;xor1 = ord(decoded[<span class="number">0</span>]) ^ ord(<span class="string">'g'</span>)</span><br><span class="line">&gt; &gt;xor2 = ord(decoded[<span class="number">1</span>]) ^ ord(<span class="string">'i'</span>)</span><br><span class="line">&gt; &gt;</span><br><span class="line">&gt; &gt;xors = [xor1, xor2]</span><br><span class="line">&gt; &gt;</span><br><span class="line">&gt; &gt;res = <span class="string">""</span></span><br><span class="line">&gt; &gt;<span class="keyword">for</span> i <span class="keyword">in</span> range(len(decoded)):</span><br><span class="line">&gt; &gt;    res += chr(ord(decoded[i]) ^ xors[i % <span class="number">2</span>])</span><br><span class="line">&gt; &gt;</span><br><span class="line">&gt; &gt;<span class="keyword">print</span> (res)</span><br><span class="line">&gt; &gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>Output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/media/sf_CTFs/tamu/Smiley# python solve.py</span><br><span class="line">gigem&#123;I&apos;m not superstitious, but I am a little stitious.&#125;</span><br></pre></td></tr></table></figure>
+        <hr>
+<p><strong>简单ECC概念</strong></p>
+<p>参考链接：<a href="http://www.8btc.com/eccmath" target="_blank" rel="noopener">http://www.8btc.com/eccmath</a></p>
+<p>大体上的意思是说，给你一个曲线F：y^2=x^3+ax+b</p>
+<p>你确定下来a和b，然后找一个在曲线F上的点G（x1,y1）</p>
+<p>然后自己随机生成一个k（私钥）</p>
+<p>然后生成公钥S=kG</p>
+<p>注意，这里的kG可不是k*G这么简单，这是几何意义上的：</p>
+<p>S=G+G+G+G+……+G（K个G）</p>
+<p>然后把公钥丢出去，私钥留给自己</p>
+<p>和RSA差不多啦</p>
+<p>重点应该是在于如何求S</p>
+<p>G（x1,y1）,P（x2,y2）</p>
+<p>重点来了：核心公式</p>
+<p>x3≡t^2-x1-x2(mod p)</p>
+<p>y3≡t(x1-x3)-y1(mod p)</p>
+<p>其中</p>
+<ul>
+<li>若P=G 则 t=(3x^2+a)/2y1</li>
+<li>若P≠G 则 t=(y2-y1)/(x2-x1)</li>
+</ul>
+<p>故此可以求出公钥S</p>
+<p>于是脚本如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding:utf8 -*-</span><br><span class="line">a=<span class="number">16546484</span></span><br><span class="line">p=<span class="number">15424654874903</span></span><br><span class="line">def egcd(t, b):</span><br><span class="line">    <span class="keyword">if</span> t == <span class="number">0</span>:</span><br><span class="line">      <span class="keyword">return</span> (b, <span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">      g, y, x = egcd(b % t, t)</span><br><span class="line">      <span class="keyword">return</span> (g, x - (b <span class="comment">// t) * y, y)</span></span><br><span class="line">def modinv(o, m):</span><br><span class="line">    g, x, y = egcd(o, m)</span><br><span class="line">    <span class="keyword">if</span> g != <span class="number">1</span>:</span><br><span class="line">      raise Exception(<span class="string">'modular inverse does not exist'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">      <span class="keyword">return</span> x % m</span><br><span class="line">def ecc_m(x1,y1,x2,y2):</span><br><span class="line">    <span class="keyword">if</span> ((x1 == x2) &amp; (y1 == y2)):</span><br><span class="line">        fenzi=<span class="number">3</span>*x1*x1+a</span><br><span class="line">        fenmu=<span class="number">2</span>*y1</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        fenzi = y2 - y1</span><br><span class="line">        fenmu = x2 - x1</span><br><span class="line">    m=(abs(fenzi) * modinv(abs(fenmu), p)) % p</span><br><span class="line">    <span class="keyword">if</span> ((fenzi &gt;= <span class="number">0</span> &amp; fenmu &gt;= <span class="number">0</span>) | (fenzi &lt; <span class="number">0</span> &amp; fenmu &lt; <span class="number">0</span>)):</span><br><span class="line">        <span class="keyword">return</span> m</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> p - m</span><br><span class="line">def ecc_x(x1,x2,m):</span><br><span class="line">    result_x = m*m-x1-x2</span><br><span class="line">    <span class="keyword">if</span> result_x&gt;<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> result_x%p</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        p1=p</span><br><span class="line">        <span class="keyword">if</span> abs(result_x)&gt;p1:</span><br><span class="line">            shang=abs(result_x)/p</span><br><span class="line">            p1=shang*p+p</span><br><span class="line">        <span class="keyword">return</span> p1+result_x</span><br><span class="line">def ecc_y(x1,result_x,y1,m):</span><br><span class="line">    result_y = m*(x1-result_x)-y1</span><br><span class="line">    <span class="keyword">if</span> result_y&gt;<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> result_y%p</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        p1 = p</span><br><span class="line">        <span class="keyword">if</span> abs(result_y) &gt; p1:</span><br><span class="line">            shang = abs(result_y) / p</span><br><span class="line">            p1 = shang * p + p</span><br><span class="line">        <span class="keyword">return</span> p1 + result_y</span><br><span class="line">def ecc_result_x(x1,y1,x2,y2):</span><br><span class="line">    m = ecc_m(x1,y1,x2,y2)</span><br><span class="line">    result_x=ecc_x(x1,x2,m)</span><br><span class="line">    <span class="keyword">return</span> result_x</span><br><span class="line">def ecc_result_y(x1,y1,x2,y2):</span><br><span class="line">    m = ecc_m(x1,y1,x2,y2)</span><br><span class="line">    result_x = ecc_x(x1, x2, m)</span><br><span class="line">    result_y=ecc_y(x1, result_x, y1, m)</span><br><span class="line">    <span class="keyword">return</span> result_y</span><br><span class="line">x1=x2=x3=<span class="number">6478678675</span></span><br><span class="line">y1=y2=<span class="number">5636379357093</span></span><br><span class="line">n=<span class="number">546767</span></span><br><span class="line"><span class="keyword">while</span>(n&gt;<span class="number">0</span>):</span><br><span class="line">    x2=ecc_result_x(x1,y1,x2,y2)</span><br><span class="line">    y2=ecc_result_y(x1,y1,x3,y2)</span><br><span class="line">    x3=x2</span><br><span class="line">    n-=<span class="number">1</span></span><br><span class="line">print x2,y2</span><br><span class="line">result = x2+y2</span><br><span class="line">flag = <span class="string">"XUSTCTF&#123;%s&#125;"</span>%result</span><br><span class="line">print flag</span><br></pre></td></tr></table></figure>
+<p>运行后即可得到flag</p>
+
       
     </div>
 
@@ -492,14 +496,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/03/18/repeat-xor/" rel="next" title="repeat xor">
+                <i class="fa fa-chevron-left"></i> repeat xor
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/16/简单ECC概念/" rel="prev" title="简单ECC">
-                简单ECC <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/16/Medium RSA/" rel="prev" title="Medium RSA">
+                Medium RSA <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -544,17 +552,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -617,23 +616,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目:)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">2.</span> <span class="nav-text">Description:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">3.</span> <span class="nav-text">Solution:</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
