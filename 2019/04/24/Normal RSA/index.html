@@ -98,24 +98,24 @@
 
 
 
-  <meta name="description" content="题目:)Description:Look at what I found! XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH Solution:这段文字看起来像base64，let’s try to decode! 1echo XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVV">
+  <meta name="description" content="Normal RSAopenssl的使用 命令如下openssl rsa -pubin -text -modulus -in warmup -in pubkey.pem yafu的github链接 用yafu做大数分解效率确实很高，尤其是在p和q相近或者差距非常大或非常小时。https://github.com/DarkenCode/yafu 也可以使用http://www.factordb.co">
 <meta property="og:type" content="article">
-<meta property="og:title" content="repeat xor">
-<meta property="og:url" content="http://yoursite.com/2019/03/18/repeat-xor/index.html">
+<meta property="og:title" content="Romdoor’s blog">
+<meta property="og:url" content="http://yoursite.com/2019/04/24/Normal RSA/index.html">
 <meta property="og:site_name" content="Romdoor’s blog">
-<meta property="og:description" content="题目:)Description:Look at what I found! XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH Solution:这段文字看起来像base64，let’s try to decode! 1echo XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVV">
+<meta property="og:description" content="Normal RSAopenssl的使用 命令如下openssl rsa -pubin -text -modulus -in warmup -in pubkey.pem yafu的github链接 用yafu做大数分解效率确实很高，尤其是在p和q相近或者差距非常大或非常小时。https://github.com/DarkenCode/yafu 也可以使用http://www.factordb.co">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-21T15:15:03.535Z">
+<meta property="og:updated_time" content="2019-04-24T13:40:07.780Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="repeat xor">
-<meta name="twitter:description" content="题目:)Description:Look at what I found! XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH Solution:这段文字看起来像base64，let’s try to decode! 1echo XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVV">
+<meta name="twitter:title" content="Romdoor’s blog">
+<meta name="twitter:description" content="Normal RSAopenssl的使用 命令如下openssl rsa -pubin -text -modulus -in warmup -in pubkey.pem yafu的github链接 用yafu做大数分解效率确实很高，尤其是在p和q相近或者差距非常大或非常小时。https://github.com/DarkenCode/yafu 也可以使用http://www.factordb.co">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/18/repeat-xor/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/24/Normal RSA/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>repeat xor | Romdoor’s blog</title>
+  <title> | Romdoor’s blog</title>
   
 
 
@@ -363,7 +363,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/18/repeat-xor/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/24/Normal RSA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.left">
@@ -380,7 +380,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">repeat xor
+          <h1 class="post-title" itemprop="name headline">
 
               
             
@@ -406,25 +406,9 @@
                 
               
 
-              <time title="创建时间：2019-03-18 01:37:49" itemprop="dateCreated datePublished" datetime="2019-03-18T01:37:49+08:00">2019-03-18</time>
+              <time title="创建时间：2019-04-24 21:40:07" itemprop="dateCreated datePublished" datetime="2019-04-24T21:40:07+08:00">2019-04-24</time>
             
 
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-21 23:15:03" itemprop="dateModified" datetime="2019-04-21T23:15:03+08:00">2019-04-21</time>
-              
             
           </span>
 
@@ -457,24 +441,24 @@
       
 
       
-        <h2 id="题目"><a href="#题目" class="headerlink" title="题目:)"></a>题目:)</h2><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Look at what I found! XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH</p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>这段文字看起来像base64，let’s try to decode!</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH | base64 -d</span><br></pre></td></tr></table></figure>
-<p>得到：]@]LWRsW TFN I\JLHZN@N@U\I♣KO]`HW [ V@N]VLZN@N@U\IG</p>
-<p>前三个字母给我们一个理由保持乐观:我们知道所有flag是<code>gigem</code>,第一和第三个字节相同的匹配这个模式。</p>
-<p>起初我认为这可能是某种旋转密码,但之间的差异<code>g</code>和0 x5d比之间的差异是不同的<code>i</code>和0 x40。</p>
-<p>下一个尝试XOR密码。 XOR属性之一是,如果我们假设<code>a^b = c</code>,那么这也是事实<code>a^c = b</code>。 如果有一些秘密密钥<code>k</code>用来XOR原始明文,我们知道吗<code>&#39;g&#39; ^ key = 0x5d</code>,那么我们可以通过执行恢复密钥0x5d ^ ‘g’`得到0 x3a。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; &quot;&quot;.join(chr(ord(x) ^ 0x3a) for x in base64.b64decode(&quot;XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH&quot;))</span><br><span class="line">&apos;gzgvmhI4m3n|t3sfpvr`tztzofs? qug Z rm3a3lztglv `tztzofs=&#125;&apos;</span><br></pre></td></tr></table></figure>
-<p>结果不太对即使开头得到g结尾得到}</p>
-<p>我猜想有两个key轮流加密,而</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>chr(:<span class="number">0x3a</span>)</span><br><span class="line"><span class="string">':'</span></span><br></pre></td></tr></table></figure>
-<p>恰巧题目又给我们提醒<strong>:)</strong></p>
-<p>编写exp:</p>
+        <h1 id="Normal-RSA"><a href="#Normal-RSA" class="headerlink" title="Normal RSA"></a>Normal RSA</h1><p>openssl的使用</p>
+<p>命令如下<code>openssl rsa -pubin -text -modulus -in warmup -in pubkey.pem</code></p>
+<p>yafu的github链接 用yafu做大数分解效率确实很高，尤其是在p和q相近或者差距非常大或非常小时。<code>https://github.com/DarkenCode/yafu</code> 也可以使用<code>http://www.factordb.com/</code>网站在线分解，速度会更快一些。 分解完毕后我们就可以知道这两个素数分别是什么了。</p>
 <blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&gt; &gt;<span class="keyword">import</span> base64</span><br><span class="line">&gt; &gt;</span><br><span class="line">&gt; &gt;s = <span class="string">"XUBdTFdScw5XCVRGTglJXEpMSFpOQE5AVVxJBRpLT10aYBpIVwlbCVZATl1WTBpaTkBOQFVcSQdH"</span></span><br><span class="line">&gt; &gt;decoded = base64.b64decode(s)</span><br><span class="line">&gt; &gt;</span><br><span class="line">&gt; &gt;xor1 = ord(decoded[<span class="number">0</span>]) ^ ord(<span class="string">'g'</span>)</span><br><span class="line">&gt; &gt;xor2 = ord(decoded[<span class="number">1</span>]) ^ ord(<span class="string">'i'</span>)</span><br><span class="line">&gt; &gt;</span><br><span class="line">&gt; &gt;xors = [xor1, xor2]</span><br><span class="line">&gt; &gt;</span><br><span class="line">&gt; &gt;res = <span class="string">""</span></span><br><span class="line">&gt; &gt;<span class="keyword">for</span> i <span class="keyword">in</span> range(len(decoded)):</span><br><span class="line">&gt; &gt;    res += chr(ord(decoded[i]) ^ xors[i % <span class="number">2</span>])</span><br><span class="line">&gt; &gt;</span><br><span class="line">&gt; &gt;<span class="keyword">print</span> (res)</span><br><span class="line">&gt; &gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<p>3 用rsatool生成私钥文件: private.pem <code>python rsatool.py -o private.pem -e 65537 -p 275127860351348928173285174381581152299 -q 319576316814478949870590164193048041239</code></p>
 </blockquote>
-<p>Output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/media/sf_CTFs/tamu/Smiley# python solve.py</span><br><span class="line">gigem&#123;I&apos;m not superstitious, but I am a little stitious.&#125;</span><br></pre></td></tr></table></figure>
+<p>得到如下结果。 <code>`</code> $ python rsatool.py -o private.pem -e 65537 -p 275127860351348928173285174381581152299 -q 319576316814478949870590164193048041239 Using (p, q) to initialise RSA instance</p>
+<p>n = c2636ae5c3d8e43ffb97ab09028f1aac6c0bf6cd3d70ebca281bffe97fbe30dd</p>
+<p>e = 65537 (0x10001)</p>
+<p>d = 1806799bd44ce649122b78b43060c786f8b77fb1593e0842da063ba0d8728bf1</p>
+<p>p = 275127860351348928173285174381581152299 (0xcefbb2cf7e18a98ebedc36e3e7c3b02b)</p>
+<p>q = 319576316814478949870590164193048041239 (0xf06c28e91c8922b9c236e23560c09717)</p>
+<p>Saving PEM as private.pem</p>
+<p>`<code></code> 现在你会发现当前的路径下会出现一个文件<code>private.pem</code>这个文件就是我们所生成的私钥文件。</p>
+<blockquote>
+<p>4 用private.pem解密flag.enc <code>openssl rsautl -decrypt -in flag.enc -inkey private.pem</code> 我们就可以得到flag了。<code>PCTF{256b_i5_m3dium}</code></p>
+</blockquote>
+
       
     </div>
 
@@ -504,15 +488,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/04/21/part_des/" rel="next" title="Part_des">
+                <i class="fa fa-chevron-left"></i> Part_des
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/30/Medium RSA/" rel="prev" title="Medium RSA">
-                Medium RSA <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -640,7 +624,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目:)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">2.</span> <span class="nav-text">Description:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">3.</span> <span class="nav-text">Solution:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Normal-RSA"><span class="nav-number">1.</span> <span class="nav-text">Normal RSA</span></a></li></ol></div>
             
 
           </div>
